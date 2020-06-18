@@ -1,0 +1,53 @@
+
+intents:
+  - greet
+  - location
+  - allergies
+  - goodbye
+  - affirm
+  - deny
+  - out_of_scope
+
+entities:
+  - city
+  - allergy
+
+slots:
+  city:
+    type: text
+  allergy:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Welcome to my restaurant, I will recommend the best place to eat"
+
+  utter_ask_location:
+  - text: "Where do you live?"
+
+  utter_allergies:
+  - text: "Any allergies I should know about?"
+  - text: "Do you have any allergy?"
+
+  utter_restaurant:
+  - text: "The best restaurant for a {allergy} intolerant in {city} is Vega, best vegan restaurant in town"
+
+  utter_restaurant_no_location:
+  - text: "If you don't know where to eat, you can try travelling to Madrid to have a bocadillo de calamares"
+
+  utter_no_restaurant:
+  - text: "Can't recommend you a restaurant"
+
+  utter_restaurant_no_allergy:
+  - text: "In {city} You should try the tortilla from Bar Martín"
+
+  utter_goodbye:
+  - text: "goodbye 😢"
+  - text: "bye bye 😢"
+
+  utter_default:
+    - text: "sorry, I didn't get that, can you rephrase it?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
