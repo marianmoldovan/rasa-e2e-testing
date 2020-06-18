@@ -61,7 +61,7 @@ If you want to test manually the bot, run: `docker run -it -v $(pwd):/app rasa/r
 
 ## Task
 
-Write the following tests for our restaurant bot
+Write the following tests for our restaurant bot. Search the response and flows inside the project.
 
 ## Test 1
 
